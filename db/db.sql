@@ -3,4 +3,4 @@ DROP DATABASE IF EXISTS work;
 /*creates the work database*/
 CREATE DATABASE work;
 /*uses the work database*/
-USE election;
+USE work;

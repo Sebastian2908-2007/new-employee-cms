@@ -1,0 +1,80 @@
+/*department must be created firlst because the roles table depends on it existing in order to use the foreign key*/
+INSERT INTO departments (dept_name)
+VALUES
+('sales force'),
+('accounting'),
+('customer service'),
+('shop maintenance'),
+('product assembly');
+
+/*roles must be created after department and before employees due to the dependance of employees foreign key constraint*/
+INSERT INTO roles (title,salary,department_id)
+VALUES
+('Sales Manager',100000,1),
+('Account Executive', 50000,1),
+('Accounting Manager',150000,2),
+('Accountent',125000,2),
+('Customer service manager',55000,3),
+('Customer Service Rep',35000,3),
+('Head Maintenace',60000,4),
+('Maintence Technician',52000,4),
+('Shop foreman',51000,5),
+('Frame Technician',44000,5),
+('Wheel Technician',42000,5),
+('Handle bar Technician',41000,5),
+('Bell Technician',34000,5),
+('Brake Technician',44000,5),
+('Pedal Technician',43000,5);
+
+/*employees must be added last due to the reliance on the role table*/
+
+INSERT INTO employees (first_name,last_name,role_id,manager_id)
+VALUES
+('Bob','Packard',1,NULL),
+('Gena','Smith',2,1),
+('Arron','Bidsby',2,1),
+('Lila','Outwright',2,1),
+('Sarah','Baker',2,1),
+('Eliza','Bertholmey',2,1),
+('Clarissa','Openshaut',2,1),
+('Eduardo','Gonzalos',2,1),
+('Tyrone','Wilson',2,1),
+('Xiang','Lou',2,1),
+('Rex','Parker',2,1),
+('Tyreek','Bablokoo',3,NULL),
+('Jack','Frost',4,12),
+('Brad','Smith',4,12),
+('John','Argy',4,12),
+('Cody','Jackson',4,12),
+('Kayla','Billings',5,NULL),
+('Bill','Roberts',6,17),
+('Oakoa','Mimara',6,17),
+('Siong','Jaoa',6,17),
+('Albert','Washington',6,17),
+('Darius','Oxbow',6,17),
+('Jarime','Cook',6,17),
+('Hector','Rodriguez',7,NULL),
+('Heather','Hastings',8,24),
+('Jill','Hicks',8,24),
+('Heather','Holland',8,24),
+('Misti','Fletcher',8,24),
+('Jim','Donaview',9,NULL),
+('Sheena','Cocks',10,29),
+('Jamie','Hill',10,29),
+('Lisa','Drabnet',10,29),
+('Hillary','Suffix',10,29),
+('Joe','Clinton',10,29),
+('Brandon','Howards',11,29),
+('Goseph','Letsin',11,29),
+('Howard','Payne',11,29),
+('Kerry','Gorgachauff',12,29),
+('John','Bush',12,29),
+('Mitt','Izwak',12,29),
+('Sara','Schumans',13,29),
+('Brandi','Rodriguez',13,29),
+('Berry','Schume',13,29),
+('Benny','Gorganson',14,29),
+('Samantha','Ruth',14,29),
+('Tammy','Airheart',14,29),
+('Joy','Summers',14,29),
+('Allie','Horensicoff',14,29);
