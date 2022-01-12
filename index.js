@@ -9,11 +9,11 @@ const Delete = require('./lib/Delete');
 //new Add().departments(dept_name);
 
 
-const dept_id = 6;
+const emp_id = 41;
 
 // 35 through 37 have roll 11
 
 //new Update().roleSalary(new_salary,role_id);
-//new Delete().department(dept_id);
-new View().roles();
+new Delete().employee(emp_id);
+new View().employees();
 //new View().employees();
