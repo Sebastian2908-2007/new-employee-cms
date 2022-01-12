@@ -7,9 +7,10 @@ const Update = require('./lib/Update');
 
 //new Add().departments(dept_name);
 
-const manger_id = 1;
-const emp_id = 18;
+const new_salary = 110000;
+const role_id = 1;
+
 // bill roberts original role id 6
 
-new Update().empManager(manger_id,emp_id);
-new View().employees();
+new Update().roleSalary(new_salary,role_id);
+new View().roles();
