@@ -10,12 +10,14 @@ const ViewBy = require('./lib/ViewBy');
 //new Add().departments(dept_name);
 
 
-const manager_id = 29;
+const role_id = 2;
+
 
 // 35 through 37 have roll 11
 
 //new Update().roleSalary(new_salary,role_id);
 //new Delete().employee(emp_id);
 //new View().employees();
-//new View().employees();
-new ViewBy().manager(manager_id);
+//new View().roles();
+//new ViewBy().manager(manager_id);
+new ViewBy().role(role_id);
