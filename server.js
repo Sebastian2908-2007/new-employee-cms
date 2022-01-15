@@ -1,21 +1,15 @@
 const express = require('express');
 const PORT = process.env.PORT || 3001
 const app = express();
-const db = require('./db/connection');
 const View = require('./lib/View');
-const allDept =  new View().departments();
+const apiRoutes = require('./routes/apiRoutes');
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
-app.get('/api/departments',(req,res) => {
-    
-    res.json({
-        message:'success',
-        data: allDept._rows
-    })
-  
-})
+// use the apiRoutes in routes directory
+app.use('/api',apiRoutes);
+
 
 // default response for any request (Not Found)
 app.use((req,res) => {
