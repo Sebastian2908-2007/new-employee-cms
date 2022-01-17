@@ -3,17 +3,8 @@ const router = express.Router();
 const db = require('../../db/connection')
 const Add = require('../../lib/Add');
 const Update = require('../../lib/Update');
+const Delete = require('../../lib/Delete');
 
-
-// add a role
-router.post('/roles',({body},res) => {
-    new Add().roles(body.title,body.salary,body.department_id);
-
-    res.json({
-        message:'success',
-        data: body
-    })
-});
 
 // get all roles
 router.get('/roles',(req,res) => {
@@ -35,6 +26,26 @@ router.get('/roles',(req,res) => {
     });
     
 });
+
+// add a role
+router.post('/roles',({body},res) => {
+    new Add().roles(body.title,body.salary,body.department_id);
+
+    res.json({
+        message:'success',
+        data: body
+    })
+});
+
+router.delete('/roles/:id',(req,res) => {
+   new Delete().role(req.params.id);
+
+   res.json({
+       message: 'successfull deletion',
+       id: req.params.id
+   })
+});
+
 
 router.put('/roles/:id',(req,res) => {
    new Update().roleSalary(req.body.salary,req.params.id);

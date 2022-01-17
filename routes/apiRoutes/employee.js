@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const View = require('../../lib/View');
+const Delete = require('../../lib/Delete');
 const Add = require('../../lib/Add');
 const Update = require('../../lib/Update');
 const db = require('../../db/connection')
-//const allEmployees = new View().employees();
+
 
 
 
@@ -29,11 +29,6 @@ router.get('/employees',  (req,res) => {
     })
     });
     
-     /*res.json({
-        message:'success',
-        data: allEmployees._rows
-    })*/
-
 })
 
 
@@ -46,6 +41,13 @@ router.post('/employees',({body},res) => {
     })
 });
 
+router.delete('/employees/:id',(req,res) => {
+     new Delete().employee(req.params.id);
+     res.json({
+        message: 'successfull deletion',
+        id: req.params.id
+    })
+});
 
 
 // update an employees role
