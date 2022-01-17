@@ -25,7 +25,7 @@ This is a project for adding employee's thier roles and departments to a relatio
 console.table,express,inquire,mysql2 and dotenv for storing sensitive database info required for the mysql2 connection.
 
 ## Usage
- First you need to clone the repo. Once installed run npm init then npm install. After dependencies are installed, enter into mysql shell "mysql -u root -p" then run source db/ run "node index" then follow prompts. Keep in mind you will need to make your own .env file to store your mysql2 database connection info before running "node index"
+ First you need to clone the repo. Once installed run npm init then npm install. After dependencies are installed, enter into mysql shell "mysql -u root -p" then run source db/db.sql do the same for schema.sql and seeds.sql. Run "node index" then follow prompts. Keep in mind you will need to make your own .env file to store your mysql2 database connection info before running "node index" Which should be done before entering mysql shell and after downloading dependencies.
 
  ## Contributors
 
