@@ -47,6 +47,11 @@ If you Have any Questions email me @
 
 sebastiancrespin279@gmail.com
 
+## tutorial
+Watch in order
+ 1: https://watch.screencastify.com/v/86tvDE70SISDmLUNp9gR
+ 2: https://watch.screencastify.com/v/fHu5s6ZiuAPHh71CHlsa
+
 ## License
 ISC 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)]
