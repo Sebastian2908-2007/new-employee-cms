@@ -11,9 +11,9 @@ const db = mysql2.createConnection(
     }
 );
 
-db.connect(err => {
+   /*db.connect(err => {
   if(err) throw err;
   console.log('connected to work database successfully');
-});
+});*/
 
 module.exports = db;

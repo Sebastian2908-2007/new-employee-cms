@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const View = require('../../lib/View');
+const db = require('../../db/connection')
 const Add = require('../../lib/Add')
-const allDept = new View().departments();
+
 
 // create a department
 router.post('/departments',({body},res) => {
@@ -16,10 +16,18 @@ router.post('/departments',({body},res) => {
 // get departments
 router.get('/departments',(req,res) => {
    
-    res.json({
-        message:'success',
-        data: allDept._rows
-    })
+    const sql = `SELECT * FROM departments`;
+
+    const result = db.query(sql,(err,rows) => {
+        if(err) {  console.log(err);
+        return;
+        }
+        res.json({
+            message:'success',
+            data: rows
+        })
+    }); 
+    
   
 })
 
