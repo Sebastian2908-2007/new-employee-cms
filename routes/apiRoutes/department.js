@@ -4,7 +4,7 @@ const View = require('../../lib/View');
 const Add = require('../../lib/Add')
 const allDept = new View().departments();
 
-
+// create a department
 router.post('/departments',({body},res) => {
     new Add().departments(body.dept_name)
      res.json({
